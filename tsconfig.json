@@ -4,12 +4,14 @@
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es5",
+    //    "lib": ["es2021", "dom"],
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "./src"
+    //    "strictNullChecks": true,
   },
   "ts-node": {
     "compilerOptions": {
