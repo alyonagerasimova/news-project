@@ -24,6 +24,7 @@ export const Sidebar = ({ classname }: SidebarProps) => {
             <button
                 type="button"
                 onClick={clickCollapse}
+                data-testid="sidebar-toggle"
             >
                 {t('toggle')}
             </button>
