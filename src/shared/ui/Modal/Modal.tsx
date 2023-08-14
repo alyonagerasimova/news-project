@@ -7,10 +7,11 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import styles from './Modal.module.scss';
 
 interface ModalProps {
-    isOpen: boolean,
-    onClose: () => void,
+    isOpen?: boolean,
+    onClose?: () => void,
     className?: string,
-    children?: ReactNode
+    children?: ReactNode,
+    lazy?: boolean
 }
 
 const ANIMATION_DELAY = 300;
@@ -19,10 +20,12 @@ export const Modal = (props: ModalProps) => {
         className,
         children,
         isOpen,
+        lazy,
         onClose,
     } = props;
 
     const [isClosing, setIsClosing] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
     const { theme } = useTheme();
 
@@ -47,6 +50,12 @@ export const Modal = (props: ModalProps) => {
 
     useEffect(() => {
         if (isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
+
+    useEffect(() => {
+        if (isOpen) {
             window.addEventListener('keydown', onKeyDown);
         }
         return () => {
@@ -59,6 +68,10 @@ export const Modal = (props: ModalProps) => {
         [styles.opened]: isOpen,
         [styles.isClosing]: isClosing,
     };
+
+    if (lazy && !isMounted) {
+        return null;
+    }
 
     return (
         <Portal>

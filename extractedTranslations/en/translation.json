@@ -1,6 +1,7 @@
 {
   "About": "About",
   "Home": "Home",
+  "Login": "Login",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Accusantium aperiam": " Accusantium aperiam"
   },
@@ -8,7 +9,9 @@
   "increment": "increment",
   "throwError": "throwError",
   "toggle": "toggle",
-  "Войти": "Войти",
+  "Введите имя": "Enter name",
+  "Введите пароль": "Enter password",
+  "Войти": "Login",
   "Главная страница": "Main page",
   "О сайте": "About",
   "Обновить страницу": "Обновить страницу",
