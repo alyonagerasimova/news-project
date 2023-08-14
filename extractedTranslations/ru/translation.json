@@ -2,13 +2,10 @@
   "About": "About",
   "Home": "Home",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
-    " Accusantium aperiam": " Accusantium aperiam",
-    " Accusantium aperiam\n                aspernatur debitis enim\n                itaque laborum, laudantium, minima nulla officiis placeat quaerat,\n                quas reiciendis vero": {
-      " A ex explicabo\n                harum impedit nisi": {
-        "": ""
-      }
-    }
+    " Accusantium aperiam": " Accusantium aperiam"
   },
+  "decrement": "Уменьшить",
+  "increment": "Увеличить",
   "throwError": "throwError",
   "toggle": "toggle",
   "Войти": "Войти",
